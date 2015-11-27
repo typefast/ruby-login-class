@@ -6,5 +6,5 @@ user = Register.new
 registered_user = user.register
 
 log_me = LogIn.new(registered_user)
-log_me.print_details
+log_me.log_in
 
