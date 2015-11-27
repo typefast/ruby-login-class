@@ -1,8 +1,10 @@
 require './register.rb'
-
+require './log_in.rb'
 
 
 user = Register.new
 registered_user = user.register
 
-p registered_user
+log_me = LogIn.new(registered_user)
+log_me.print_details
+
