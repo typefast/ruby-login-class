@@ -1,14 +1,14 @@
 class Register
   attr_reader :username, :password
   def initialize
-    @username = ''
-    @password = ''
+    @storage = Hash.new(0)
   end
   
   def register
-    @username = register_username
-    @password = register_password
+    username = register_username
+    password = register_password
     puts "You registered #{username} and #{password}"
+    @storage[username] = password
   end
   
   private
@@ -24,6 +24,3 @@ class Register
   end
 end
 
-
-user = Register.new
-user.register
