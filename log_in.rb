@@ -1,5 +1,5 @@
 class LogIn
-  attr_reader :logged
+  attr_accessor :logged
   def initialize(user)
     @user = user
     @logged = false
@@ -15,6 +15,7 @@ class LogIn
       puts "You are logged in!"
       @logged = true
     else 
+      puts "You are not logged in"
       @logged = false
     end
   end
