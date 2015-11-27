@@ -6,5 +6,7 @@ user = Register.new
 registered_user = user.register
 
 log_me = LogIn.new(registered_user)
+p log_me.logged_in?
 log_me.log_in
+p log_me.logged_in?
 

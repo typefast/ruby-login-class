@@ -1,7 +1,8 @@
 class LogIn
-  
+  attr_reader :logged
   def initialize(user)
     @user = user
+    @logged = false
   end
   
   def log_in
@@ -12,9 +13,13 @@ class LogIn
     
     if username == @user[0] && password == @user[1]
       puts "You are logged in!"
-      return true
+      @logged = true
     else 
-      return false
+      @logged = false
     end
+  end
+  
+  def logged_in?
+    @logged
   end
 end
