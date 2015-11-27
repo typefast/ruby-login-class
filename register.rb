@@ -1,12 +1,13 @@
 class Register
+  attr_reader :username, :password
   def initialize
     @username = ''
     @password = ''
   end
   
   def register
-    username = register_username
-    password = register_password
+    @username = register_username
+    @password = register_password
     puts "You registered #{username} and #{password}"
   end
   
@@ -22,3 +23,7 @@ class Register
     gets.chomp
   end
 end
+
+
+user = Register.new
+user.register
